@@ -9,6 +9,9 @@
 use Magento\Framework\App\Bootstrap;
 use Magento\Framework\App\Filesystem\DirectoryList;
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 try {
     require __DIR__ . '/../app/bootstrap.php';
 } catch (\Exception $e) {
@@ -26,7 +29,7 @@ HTML;
 
 $params = $_SERVER;
 $params[Bootstrap::INIT_PARAM_FILESYSTEM_DIR_PATHS] = array_replace_recursive(
-    $params[Bootstrap::INIT_PARAM_FILESYSTEM_DIR_PATHS] ?? [],
+    he    $params[Bootstrap::INIT_PARAM_FILESYSTEM_DIR_PATHS] ?? [],
     [
         DirectoryList::PUB => [DirectoryList::URL_PATH => ''],
         DirectoryList::MEDIA => [DirectoryList::URL_PATH => 'media'],
