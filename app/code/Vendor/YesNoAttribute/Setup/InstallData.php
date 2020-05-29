@@ -2,11 +2,14 @@
 
 namespace Vendor\YesNoAttribute\Setup;
 
-use Magento\Eav\Setup\EavSetup;
+use Magento\Catalog\Model\Product;
+use Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend;
+use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
+use Vendor\YesNoAttribute\Model\Config\Source\YesNoAttribute;
 
 class InstallData implements InstallDataInterface
 {
@@ -21,17 +24,17 @@ class InstallData implements InstallDataInterface
     {
         $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
         $eavSetup->addAttribute(
-            \Magento\Catalog\Model\Product::ENTITY,
+            Product::ENTITY,
             'yes_no_attribute',
             [
                 'type' => 'int',
-                'backend' => \Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend::class,
+                'backend' => ArrayBackend::class,
                 'frontend' => '',
                 'label' => 'YES/NO Attribute',
                 'input' => 'select',
                 'class' => '',
-                'source' => \Vendor\YesNoAttribute\Model\Config\Source\YesNoAttribute::class,
-                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'source' => YesNoAttribute::class,
+                'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
                 'visible' => true,
                 'required' => false,
                 'user_defined' => false,

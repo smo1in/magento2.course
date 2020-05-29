@@ -3,8 +3,11 @@
 namespace Vendor\CustomShipping\Model\Carrier;
 
 use Magento\Quote\Model\Quote\Address\RateRequest;
+use Magento\Quote\Model\Quote\Address\RateResult\Method;
+use Magento\Quote\Model\Quote\Address\RateResult\MethodFactory;
 use Magento\Shipping\Model\Carrier\AbstractCarrier;
 use Magento\Shipping\Model\Carrier\CarrierInterface;
+use Magento\Shipping\Model\Rate\Result;
 
 /**
  * Custom shipping model
@@ -27,7 +30,7 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
     private $rateResultFactory;
 
     /**
-     * @var \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory
+     * @var MethodFactory
      */
     private $rateMethodFactory;
 
@@ -36,7 +39,7 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
      * @param \Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory $rateErrorFactory
      * @param \Psr\Log\LoggerInterface $logger
      * @param \Magento\Shipping\Model\Rate\ResultFactory $rateResultFactory
-     * @param \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory $rateMethodFactory
+     * @param MethodFactory $rateMethodFactory
      * @param array $data
      */
     public function __construct(
@@ -44,7 +47,7 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
         \Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory $rateErrorFactory,
         \Psr\Log\LoggerInterface $logger,
         \Magento\Shipping\Model\Rate\ResultFactory $rateResultFactory,
-        \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory $rateMethodFactory,
+        MethodFactory $rateMethodFactory,
         array $data = []
     ) {
         parent::__construct($scopeConfig, $rateErrorFactory, $logger, $data);
@@ -57,7 +60,7 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
      * Custom Shipping Rates Collector
      *
      * @param RateRequest $request
-     * @return \Magento\Shipping\Model\Rate\Result|bool
+     * @return Result|bool
      */
     public function collectRates(RateRequest $request)
     {
@@ -65,10 +68,10 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
             return false;
         }
 
-        /** @var \Magento\Shipping\Model\Rate\Result $result */
+        /** @var Result $result */
         $result = $this->rateResultFactory->create();
 
-        /** @var \Magento\Quote\Model\Quote\Address\RateResult\Method $method */
+        /** @var Method $method */
         $method = $this->rateMethodFactory->create();
 
         $method->setCarrier($this->_code);

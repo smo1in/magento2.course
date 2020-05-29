@@ -6,15 +6,6 @@ use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 
 class YesNoAttribute extends AbstractSource
 {
-    public function getAllOptions()
-    {
-        $this->options = [
-            ['label' => 'Yes', 'value' => 1],
-            ['label' => 'No', 'value' => 0],
-        ];
-        return $this->options;
-    }
-
     public function getOptionText($value)
     {
         foreach ($this->getAllOptions() as $option) {
@@ -23,5 +14,14 @@ class YesNoAttribute extends AbstractSource
             }
         }
         return false;
+    }
+
+    public function getAllOptions()
+    {
+        $this->options = [
+            ['label' => 'Yes', 'value' => 1],
+            ['label' => 'No', 'value' => 0],
+        ];
+        return $this->options;
     }
 }
