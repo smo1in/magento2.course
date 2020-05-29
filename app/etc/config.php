@@ -243,11 +243,12 @@ return [
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
         'Temando_ShippingRemover' => 1,
+        'Vendor_CategoryTextAttribute' => 1,
+        'Vendor_CategoryTextAttribute2' => 1,
         'Vendor_CustomShipping' => 1,
+        'Vendor_YesNoAttribute' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
-        'Yotpo_Yotpo' => 1,
-        'Vendor_YesNoAttributes' => 1,
-        'Vendor_CustomShipping' => 1,
+        'Yotpo_Yotpo' => 1
     ]
 ];
