@@ -142,6 +142,8 @@
 
     Options +FollowSymLinks
     RewriteEngine on
+    SetEnvIf Host french.magento2.courses* MAGE_RUN_CODE=french_website
+    SetEnvIf Host french.magento2.courses* MAGE_RUN_TYPE=website
 
 ############################################
 ## you can put here your magento root folder

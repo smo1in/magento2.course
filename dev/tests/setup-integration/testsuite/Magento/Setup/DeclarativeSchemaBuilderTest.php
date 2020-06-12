@@ -17,7 +17,7 @@ use Magento\TestFramework\TestCase\SetupTestCase;
 
 /**
  * @magentoAppIsolation enabled
- * The purpose of this test is verifying initial InstallSchema, InstallData scripts.
+ * The purpose of this test is verifying initial InstallSchema, InstallSchema scripts.
  */
 class DeclarativeSchemaBuilderTest extends SetupTestCase
 {
