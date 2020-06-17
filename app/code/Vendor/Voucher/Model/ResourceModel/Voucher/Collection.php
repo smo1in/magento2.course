@@ -3,7 +3,7 @@
 namespace Vendor\Voucher\Model\ResourceModel\Voucher;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
-use Vendor\Voucher\Model\VoucherStatus as Model;
+use Vendor\Voucher\Model\Voucher as Model;
 use Vendor\Voucher\Model\ResourceModel\Voucher as ResourceModel;
 
 class Collection extends AbstractCollection
