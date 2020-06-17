@@ -46,7 +46,11 @@ class ChangeCustomerGroupIdAfter implements ObserverInterface
 
             /** @var Voucher $voucher */
             foreach ($voucherCollection->filterByCustomerId($customer->getId())->load() as $voucher) {
+<<<<<<< HEAD
             $voucher->delete();
+=======
+                $this->voucherResource->delete($voucher);
+>>>>>>> 07a3db7... Observer
             }
         }
     }
