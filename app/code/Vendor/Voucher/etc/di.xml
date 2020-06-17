@@ -1,11 +1,15 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
     <preference for="Vendor\Voucher\Api\VoucherManagementInterface"
                 type="Vendor\Voucher\Model\VoucherManagement"/>
 
-    <type name="Vendor\Voucher\Model\Voucher">
-        <plugin name="Vendor\Voucher\Plugin\PrivilegedCustomers" type="Vendor\Voucher\Plugin\PrivilegedCustomers" sortOrder="10"/>
+    <preference for="Vendor\Voucher\Api\Data\VoucherInterface"
+                type="Vendor\Voucher\Model\Voucher"/>
 
+    <type name="Vendor\Voucher\Model\VoucherManagement">
+        <plugin name="Vendor\Voucher\Plugin\PrivilegedCustomer"
+                type="Vendor\Voucher\Plugin\PrivilegedCustomer" sortOrder="10"/>
     </type>
 </config>
