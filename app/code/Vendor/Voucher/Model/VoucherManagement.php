@@ -4,7 +4,6 @@ namespace Vendor\Voucher\Model;
 
 use Exception;
 use Magento\Customer\Model\CustomerFactory as CustomerModelFactory;
-use Magento\Framework\Exception\LocalizedException;
 use Vendor\Voucher\Api\VoucherManagementInterface;
 use Vendor\Voucher\Model\ResourceModel\Voucher as VoucherResource;
 use Vendor\Voucher\Model\ResourceModel\Voucher\CollectionFactory as VoucherCollectionFactory;
@@ -29,7 +28,7 @@ class VoucherManagement implements VoucherManagementInterface
     private $voucherCollectionFactory;
     /**@var CustomerModelFactory */
     private $customerModelFactory;
-    private $voucherStatusResourceModel;
+
 
     /**
      * VoucherManagement constructor.

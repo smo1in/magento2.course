@@ -4,10 +4,10 @@
 namespace Vendor\Voucher\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
-use Magento\Framework\Model\AbstractModel;
+use Magento\Framework\Model\AbstractExtensibleModel;
 use Vendor\Voucher\Model\ResourceModel\Voucher as ResourceModel;
 
-class Voucher extends AbstractModel implements IdentityInterface
+class Voucher extends AbstractExtensibleModel implements IdentityInterface, VoucherInterface
 {
     const CACHE_TAG = 'voucher';
 
@@ -59,5 +59,23 @@ class Voucher extends AbstractModel implements IdentityInterface
     public function getVoucherCode()
     {
         return $this->getData('voucher_code');
+    }
+
+    /**
+     * @return  \Vendor\Voucher\Api\Data\VoucherExtensionInterface|null
+     */
+    public function getExtensionAttributes()
+    {
+        return $this->_getExtensionAttributes();
+    }
+
+    /**
+     * @param \Vendor\Voucher\Api\Data\VoucherExtensionInterface $extensionAttributes
+     * @return $this
+     */
+    public function setExtensionAttributes(
+        \Vendor\Voucher\Api\Data\VoucherExtensionInterface $extensionAttributes
+    ) {
+        return $this->_setExtensionAttributes($extensionAttributes);
     }
 }
