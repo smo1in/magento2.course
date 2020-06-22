@@ -1,0 +1,15 @@
+<h1>Add voucher status</h1>
+
+<?php $record = $block->getRecord(); ?>
+
+<form  action="<?php echo $block->getFormAction(); ?>" method="post">
+    <input name="status_code" type="text" value="<?php isset($record) && print $record->getStatusCode(); ?>"/>
+    <input name="id" type="hidden" value="<?php isset($record) && print $record->getId(); ?>"/>
+    <br/><br/>
+    <input type="submit" value="Send" class="action primary"/>
+</form>
+
+<br/>
+
+<a href="<?php echo $block->getUrl('voucher/voucher_status/index'); ?>" class="action primary">Back</a>
+
