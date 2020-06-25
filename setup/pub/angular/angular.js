@@ -11701,7 +11701,7 @@
                  *   - **headers** – `{function([headerName])}` – Header getter function.
                  *   - **config** – `{Object}` – The configuration object that was used to generate the request.
                  *   - **statusText** – `{string}` – HTTP status text of the response.
-                 *   - **xhrStatus** – `{string}` – Status of the XMLHttpRequest (`complete`, `error`, `timeout` or `abort`).
+                 *   - **xhrStatus** – `{string}` – Voucher of the XMLHttpRequest (`complete`, `error`, `timeout` or `abort`).
                  *
                  * A response status code between 200 and 299 is considered a success status and will result in
                  * the success callback being called. Any response status code outside of that range is

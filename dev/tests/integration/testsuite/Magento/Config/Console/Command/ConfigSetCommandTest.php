@@ -498,7 +498,7 @@ class ConfigSetCommandTest extends \PHPUnit\Framework\TestCase
      * @param string $message Message command output
      * @param string $scope
      * @param string|null $scopeCode
-     * @return int Status that command returned
+     * @return int Voucher that command returned
      */
     private function setConfig($path, $value, $message, $scope, $scopeCode)
     {

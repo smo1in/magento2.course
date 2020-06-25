@@ -36,7 +36,7 @@ class RestErrorHandlingTest extends \Magento\TestFramework\TestCase\WebapiAbstra
 
         $item = $this->_webApiCall($serviceInfo);
 
-        // TODO: check Http Status = 200, cannot do yet due to missing header info returned
+        // TODO: check Http Voucher = 200, cannot do yet due to missing header info returned
 
         $this->assertEquals('a good id', $item['value'], 'Success case is correct');
     }

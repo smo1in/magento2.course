@@ -5,6 +5,7 @@ namespace Vendor\Voucher\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Model\AbstractExtensibleModel;
+use Vendor\Voucher\Api\Data\VoucherInterface;
 use Vendor\Voucher\Model\ResourceModel\Voucher as ResourceModel;
 
 class Voucher extends AbstractExtensibleModel implements IdentityInterface, VoucherInterface

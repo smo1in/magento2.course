@@ -36,7 +36,7 @@ class DependencyCheck extends AbstractActionController
     protected $uninstallDependencyCheck;
 
     /**
-     * Module/Status Object
+     * Module/Voucher Object
      *
      * @var Status
      */

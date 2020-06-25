@@ -14,8 +14,8 @@ use Magento\Mtf\TestCase\Injectable;
 /**
  * Steps:
  * 1. Log in as admin.
- * 2. Navigate to the Stores > Settings > Order Status.
- * 3. Click on "Create New Status" button.
+ * 2. Navigate to the Stores > Settings > Order Voucher.
+ * 3. Click on "Create New Voucher" button.
  * 4. Fill in all data according to data set.
  * 5. Save order status.
  * 6. Verify created order status.
@@ -57,7 +57,7 @@ class CreateCustomOrderStatusEntityTest extends Injectable
     }
 
     /**
-     * Run Create Order Status test.
+     * Run Create Order Voucher test.
      *
      * @param OrderStatus $orderStatus
      * @return void

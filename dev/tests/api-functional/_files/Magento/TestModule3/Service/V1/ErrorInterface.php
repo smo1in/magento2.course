@@ -15,38 +15,38 @@ interface ErrorInterface
     public function success();
 
     /**
-     * @return int Status
+     * @return int Voucher
      */
     public function resourceNotFoundException();
 
     /**
-     * @return int Status
+     * @return int Voucher
      */
     public function serviceException();
 
     /**
-     * @return int Status
+     * @return int Voucher
      */
     public function authorizationException();
 
     /**
-     * @return int Status
+     * @return int Voucher
      */
     public function webapiException();
 
     /**
-     * @return int Status
+     * @return int Voucher
      */
     public function otherException();
 
     /**
-     * @return int Status
+     * @return int Voucher
      */
     public function returnIncompatibleDataType();
 
     /**
      * @param \Magento\TestModule3\Service\V1\Entity\WrappedErrorParameter[] $wrappedErrorParameters
-     * @return int Status
+     * @return int Voucher
      */
     public function inputException($wrappedErrorParameters);
 }

@@ -13,14 +13,14 @@ namespace Magento\Sales\Test\Block\Adminhtml\Order\Status;
 class GridPageActions extends \Magento\Backend\Test\Block\GridPageActions
 {
     /**
-     * "Assign Status To state" button
+     * "Assign Voucher To state" button
      *
      * @var string
      */
     protected $assignButton = '#assign';
 
     /**
-     * Click on "Assign Status To State" button
+     * Click on "Assign Voucher To State" button
      *
      * @return void
      */

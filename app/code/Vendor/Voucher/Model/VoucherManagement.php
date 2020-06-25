@@ -68,7 +68,7 @@ class VoucherManagement implements VoucherManagementInterface
             $response = ['idVoucherStatusCode' => ($voucherStatus->getId())];
             return json_encode($response);
         } catch (Exception $e) {
-            throw new Exception("Status has code already");
+            throw new Exception("Voucher has code already");
 
         }
     }

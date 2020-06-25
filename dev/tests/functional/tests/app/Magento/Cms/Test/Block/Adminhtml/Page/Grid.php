@@ -57,7 +57,7 @@ class Grid extends DataGrid
             'input' => 'selectstore'
         ],
         'is_active' => [
-            'selector' => '//label[span[text()="Status"]]/following-sibling::div',
+            'selector' => '//label[span[text()="Voucher"]]/following-sibling::div',
             'strategy' => 'xpath',
             'input' => 'dropdownmultiselect',
         ],

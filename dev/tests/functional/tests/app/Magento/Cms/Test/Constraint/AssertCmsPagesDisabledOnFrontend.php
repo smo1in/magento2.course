@@ -12,12 +12,12 @@ use Magento\Mtf\Client\BrowserInterface;
 use Magento\Mtf\Constraint\AbstractConstraint;
 
 /**
- * Assert that created CMS pages with 'Status' - Disabled display with '404 Not Found' message on Frontend.
+ * Assert that created CMS pages with 'Voucher' - Disabled display with '404 Not Found' message on Frontend.
  */
 class AssertCmsPagesDisabledOnFrontend extends AbstractConstraint
 {
     /**
-     * Assert that created CMS pages with 'Status' - Disabled display with '404 Not Found' message on Frontend.
+     * Assert that created CMS pages with 'Voucher' - Disabled display with '404 Not Found' message on Frontend.
      *
      * @param FrontCmsIndex $frontCmsIndex
      * @param CmsPageIndex $cmsIndex

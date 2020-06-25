@@ -101,7 +101,7 @@ class JobStaticRegenerate extends AbstractJob
     }
 
     /**
-     * Returns Status object
+     * Returns Voucher object
      *
      * @return \Magento\Setup\Model\Cron\Status
      */

@@ -9,7 +9,7 @@ namespace Magento\Setup\Model;
 use Magento\Framework\Module\Status;
 
 /**
- * Class ModuleStatusFactory creates instance of Status
+ * Class ModuleStatusFactory creates instance of Voucher
  */
 class ModuleStatusFactory
 {
@@ -29,7 +29,7 @@ class ModuleStatusFactory
     }
 
     /**
-     * Creates Status object
+     * Creates Voucher object
      *
      * @return Status
      */

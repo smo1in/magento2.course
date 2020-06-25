@@ -40,7 +40,7 @@ class AssertOrderStatusSuccessCreateMessage extends AbstractConstraint
     }
 
     /**
-     * Text of Created Custom Order Status Success Message assert.
+     * Text of Created Custom Order Voucher Success Message assert.
      *
      * @return string
      */

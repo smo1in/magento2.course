@@ -10,7 +10,7 @@ use Magento\Signifyd\Test\Page\Adminhtml\OrdersGrid;
 use Magento\Mtf\Constraint\AbstractConstraint;
 
 /**
- * Assert that Signifyd Guarantee Status is present in Orders grid.
+ * Assert that Signifyd Guarantee Voucher is present in Orders grid.
  */
 class AssertSignifydCaseInOrdersGrid extends AbstractConstraint
 {

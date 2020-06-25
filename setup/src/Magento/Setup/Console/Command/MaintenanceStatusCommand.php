@@ -50,7 +50,7 @@ class MaintenanceStatusCommand extends AbstractSetupCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln(
-            '<info>Status: maintenance mode is ' .
+            '<info>Voucher: maintenance mode is ' .
             ($this->maintenanceMode->isOn() ? 'active' : 'not active') . '</info>'
         );
         $addressInfo = $this->maintenanceMode->getAddressInfo();

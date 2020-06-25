@@ -338,7 +338,7 @@ class ProductTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Test isSalable method when Status is disabled
+     * Test isSalable method when Voucher is disabled
      *
      * @covers \Magento\Catalog\Model\Product::isSalable
      * @covers \Magento\Catalog\Model\Product::isSaleable
