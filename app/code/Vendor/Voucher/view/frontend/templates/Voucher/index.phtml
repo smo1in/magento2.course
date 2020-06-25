@@ -1,0 +1,50 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+
+<h1>Vouchers</h1>
+<a href="<?= $block->getUrl('voucher/voucher/insert'); ?>" class="action primary">Add a New Voucher</a>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Customer</th>
+        <th>Status</th>
+        <th>Code</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+        <th colspan="2">Action</th>
+    </tr>
+
+    <?php foreach ($block->getResult() as $status): ?>
+        <tr>
+            <td><?= $status->getData('entity_id'); ?></td>
+            <td><?= $status->getData('customer_id'); ?></td>
+            <td><?= $status->getData('status_id'); ?></td>
+            <td><?= $status->getData('voucher_code'); ?></td>
+            <td><?= $status->getData('created_at'); ?></td>
+            <td><?= $status->getData('consumed_date'); ?></td>
+            <td><a href="<?= $block->getUrl('voucher/voucher/edit') . 'id/' . $status->getData('entity_id'); ?>"
+                   class="action primary">Edit</a></td>
+            <td><a href="<?= $block->getUrl('voucher/voucher/delete') . '?id=' . $status->getData('entity_id'); ?>"
+                   class="action primary">Delete</a></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
+

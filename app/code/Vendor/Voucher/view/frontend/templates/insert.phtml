@@ -1,0 +1,33 @@
+<style>
+    label {
+        display: inline-block;
+    }
+
+    input[type=text] {
+        display: block;
+        width: 50%;
+
+        border: 1px solid #dddddd;
+        background-color: #dddddd;
+        padding: 8px;
+    }
+</style>
+
+<h1>Add voucher status</h1>
+
+<?php $record = $block->getRecord(); ?>
+
+<form action="<?php echo $block->getFormAction(); ?>" method="post">
+    <input name="status_code" type="text" value="<?php isset($record) && print $record->getStatusCode(); ?>" required/>
+    <input name="id" type="hidden" value="<?php isset($record) && print $record->getId(); ?>" required/>
+    <br/><br/>
+    <input type="submit" value="SAVE" class="action primary"/>
+</form>
+
+<br/>
+
+<a href="<?php echo $block->getUrl('voucher/voucher_status/index'); ?>" class="action primary">Back</a>
+
+
+<?php $data = $block->getEditRecord(); ?>
+

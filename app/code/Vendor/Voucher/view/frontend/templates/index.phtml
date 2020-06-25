@@ -1,0 +1,51 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<h1>Voucher statuses</h1>
+
+<a href="<?php echo $block->getUrl('voucher/voucher_status/insert'); ?>"
+   class="action primary">Add a New Voucher status</a>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Code</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+        <th colspan="2">Action</th>
+    </tr>
+
+    <?php $collection = $block->getResult(); ?>
+
+    <?php foreach ($collection as $item): ?>
+        <tr>
+            <td><?= $item->getData('entity_id'); ?></td>
+            <td><?= $item->getData('status_code'); ?></td>
+            <td><?= $item->getData('created_at'); ?>
+            <td><?= $item->getData('updated_at'); ?></td>
+            <td>
+                <a href="<?php echo $block->getUrl('voucher/voucher_status/edit') . 'id/' . $item->getData('entity_id'); ?>"
+                   class="action primary">Edit</a></td>
+            <td>
+                <a href="<?php echo $block->getUrl('voucher/voucher_status/delete') . '?id=' . $item->getData('entity_id'); ?>"
+                   class="action primary">Delete</a></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
