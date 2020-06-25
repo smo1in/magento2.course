@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\Voucher\Controller\Voucher\Status;
+namespace Vendor\Voucher\Controller\Voucher;
 
 use Magento\Customer\Model\Session as Session;
 use Magento\Framework\App\Action\Action;

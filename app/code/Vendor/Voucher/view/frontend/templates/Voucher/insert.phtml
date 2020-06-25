@@ -1,0 +1,49 @@
+<style>
+    label {
+        display: inline-block;
+    }
+
+    input[type=text] {
+        display: block;
+        width: 50%;
+
+        border: 1px solid #dddddd;
+        background-color: #dddddd;
+        padding: 8px;
+
+    }
+
+</style>
+
+
+<h3>Add voucher</h3>
+
+<br/><br/>
+
+<?php $record = $block->getRecord(); ?>
+
+<form action="<?= $block->getFormAction(); ?>" method="post">
+    <label for="customer">Voucher customer</label>
+    <input name="customer_id" id="customer" type="text"
+           value="<?php isset($record) && print $record->getCustomerId(); ?>" required/>
+    <br/><br/>
+
+    <label for="status">Voucher status</label>
+    <input name="status_id" id="status" type="text"
+           value="<?php isset($record) && print $record->getStatusId(); ?>" required/>
+    <br/><br/>
+
+    <label for="code">Voucher code</label>
+    <input type="text" name="voucher_code" id="code"
+           value="<?php isset($record) && print $record->getVoucherCode(); ?>"/>
+
+    <input type="hidden" name="id" value="<?php isset($record) && print $record->getId(); ?>"/>
+
+    <br/><br/>
+
+    <input type="submit" value="SAVE" class="action primary"/>
+</form>
+
+<br/>
+
+<a href="<?= $block->getUrl('voucher/voucher/index'); ?>" class="action primary">Back</a>

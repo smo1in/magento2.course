@@ -2,12 +2,12 @@
 
 namespace Vendor\Voucher\Block\Voucher\Status;
 
-use Magento\Framework\View\Element\Template\Context as Context;
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Template\Context;
 use Vendor\Voucher\Model\ResourceModel\VoucherStatus\Collection;
 use Vendor\Voucher\Model\ResourceModel\VoucherStatus\CollectionFactory;
 
-
-class Index extends \Magento\Framework\View\Element\Template
+class Index extends Template
 {
     /** @var CollectionFactory */
     private $_voucherStatusCollectionFactory;

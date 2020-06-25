@@ -4,42 +4,35 @@ namespace Vendor\Voucher\Controller\Voucher\Status;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
-use Magento\Framework\App\ResponseInterface;
-use Magento\Framework\Exception\AlreadyExistsException;
 use Vendor\Voucher\Model\VoucherStatusFactory;
 
 class Save extends Action
 {
     /** @var VoucherStatusFactory */
-    private $voucherStatusFactory;
+    protected $_voucherStatusFactory;
 
     public function __construct(
         Context $context,
         VoucherStatusFactory $voucherStatusFactory
     ) {
-        $this->voucherStatusFactory = $voucherStatusFactory;
+        $this->_voucherStatusFactory = $voucherStatusFactory;
 
         return parent::__construct($context);
     }
 
-    /**
-     * @return ResponseInterface
-     * @throws AlreadyExistsException
-     */
-
     public function execute()
     {
         if ($this->getRequest()->isPost()) {
-            $input = $this->getRequest()->getPostValue();
-            $voucherStatus = $this->voucherStatusFactory->create();
+            $post = $this->getRequest()->getPostValue();
+            $voucherStatus = $this->_voucherStatusFactory->create();
 
-            if ($input['id']) {
-                $voucherStatus->load($input['id']);
-                $voucherStatus->addData($input);
-                $voucherStatus->setId($input['id']);
+            if (!empty($post['id'])) {
+                $voucherStatus->load($post['id']);
+                $voucherStatus->addData($post);
+                $voucherStatus->setId($post['id']);
                 $voucherStatus->save();
             } else {
-                $voucherStatus->setData($input)->save();
+                $voucherStatus->setData($post)->save();
             }
 
             return $this->_redirect('voucher/voucher_status/index');
