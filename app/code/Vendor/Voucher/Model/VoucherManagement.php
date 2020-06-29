@@ -11,6 +11,7 @@ use Vendor\Voucher\Model\ResourceModel\VoucherStatus as VoucherStatusResourceMod
 use Vendor\Voucher\Model\ResourceModel\VoucherStatus\CollectionFactory as VoucherStatusCollectionFactory;
 use Vendor\Voucher\Model\VoucherFactory as VoucherModelFactory;
 use Vendor\Voucher\Model\VoucherStatusFactory as VoucherStatusModelFactory;
+use Magento\Customer\Model\Session as Session;
 
 class VoucherManagement implements VoucherManagementInterface
 {
@@ -28,6 +29,8 @@ class VoucherManagement implements VoucherManagementInterface
     private $voucherCollectionFactory;
     /**@var CustomerModelFactory */
     private $customerModelFactory;
+    /**@var*/
+    private $sessionFactory;
 
 
     /**
@@ -38,7 +41,8 @@ class VoucherManagement implements VoucherManagementInterface
      * @param VoucherFactory $voucherModelFactory
      * @param VoucherResource $voucherResourceFactory
      * @param VoucherCollectionFactory $voucherCollectionFactory
-     * @param CustomerModelFactory $customerModelFactory
+     * @param CustomerModelFactory $customerModelFactory,
+     * @param Session $sessionFactory
      */
     public function __construct(
         VoucherStatusCollectionFactory $voucherStatusCollectionFactory,
@@ -47,7 +51,8 @@ class VoucherManagement implements VoucherManagementInterface
         VoucherModelFactory $voucherModelFactory,
         VoucherResource $voucherResourceFactory,
         VoucherCollectionFactory $voucherCollectionFactory,
-        CustomerModelFactory $customerModelFactory
+        CustomerModelFactory $customerModelFactory,
+        Session $sessionFactory
     )
     {
         $this->voucherStatusCollectionFactory = $voucherStatusCollectionFactory;
@@ -57,6 +62,7 @@ class VoucherManagement implements VoucherManagementInterface
         $this->voucherResourceFactory = $voucherResourceFactory;
         $this->voucherCollectionFactory = $voucherCollectionFactory;
         $this->customerModelFactory = $customerModelFactory;
+        $this->sessionFactory = $sessionFactory;
     }
 
     public function createVoucherStatus($status)
@@ -68,7 +74,7 @@ class VoucherManagement implements VoucherManagementInterface
             $response = ['idVoucherStatusCode' => ($voucherStatus->getId())];
             return json_encode($response);
         } catch (Exception $e) {
-            throw new Exception("Status has code already");
+            throw new Exception("Voucher has code already");
 
         }
     }
@@ -152,5 +158,10 @@ class VoucherManagement implements VoucherManagementInterface
         }
 
         return $data;
+    }
+    public function getCurrentCustomerVouchers()
+    {
+        $customer_id = $this->sessionFactory->getId();
+        return $this->getAllVouchersByCustomerId($customer_id);
     }
 }

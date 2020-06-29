@@ -10,7 +10,7 @@ use Magento\Mtf\Constraint\AbstractConstraint;
 use Magento\Catalog\Test\Page\Adminhtml\CatalogProductEdit;
 
 /**
- * Assert Products Qty and Stock Status In Admin Panel.
+ * Assert Products Qty and Stock Voucher In Admin Panel.
  */
 class AssertProductsQtyAndStockStatusInAdminPanel extends AbstractConstraint
 {

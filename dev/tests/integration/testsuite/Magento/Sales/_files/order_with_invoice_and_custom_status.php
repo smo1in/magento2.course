@@ -14,7 +14,7 @@ require 'invoice.php';
 $orderStatus = Bootstrap::getObjectManager()->create(Status::class);
 $data = [
     'status' => 'custom_processing',
-    'label' => 'Custom Processing Status',
+    'label' => 'Custom Processing Voucher',
 ];
 $orderStatus->setData($data)->setStatus('custom_processing');
 $orderStatus->save();

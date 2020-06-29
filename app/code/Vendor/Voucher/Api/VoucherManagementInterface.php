@@ -2,8 +2,6 @@
 
 namespace Vendor\Voucher\Api;
 
-use Magento\Framework\Exception\LocalizedException;
-
 /**
  * @Api
  * Interface VoucherManagementInterface
@@ -25,7 +23,6 @@ interface VoucherManagementInterface
 
     /**
      * @return string
-
      */
     public function getAllVoucherStatuses();
 
@@ -53,4 +50,10 @@ interface VoucherManagementInterface
      * @return array
      */
     public function getAllVouchersByCustomerId($id);
+
+    /**
+     * @return array
+     */
+    public function getCurrentCustomerVouchers();
+
 }

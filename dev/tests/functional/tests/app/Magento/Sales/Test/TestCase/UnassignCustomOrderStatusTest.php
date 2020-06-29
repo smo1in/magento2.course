@@ -12,12 +12,12 @@ use Magento\Mtf\TestCase\Injectable;
 
 /**
  * Preconditions:
- * 1. Custom Order Status is created.
- * 2. Order Status assigned to State.
+ * 1. Custom Order Voucher is created.
+ * 2. Order Voucher assigned to State.
  *
  * Steps:
  * 1. Log in to backend.
- * 2. Navigate to the Stores > Settings > Order Status.
+ * 2. Navigate to the Stores > Settings > Order Voucher.
  * 3. Click "Unassign" for appropriate status.
  * 4. Perform all assertions.
  *
@@ -31,7 +31,7 @@ class UnassignCustomOrderStatusTest extends Injectable
     /* end tags */
 
     /**
-     * Order Status Index page.
+     * Order Voucher Index page.
      *
      * @var OrderStatusIndex
      */

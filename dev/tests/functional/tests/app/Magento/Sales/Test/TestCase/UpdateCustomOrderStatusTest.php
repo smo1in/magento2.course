@@ -16,13 +16,13 @@ use Magento\Mtf\TestCase\Injectable;
 
 /**
  * Preconditions:
- * 1. Custom Order Status is created.
+ * 1. Custom Order Voucher is created.
  * 2. New order should be created if orderExist=Yes.
  *
  * Steps:
  * 1. Log in as admin.
- * 2. Navigate to the Stores > Settings > Order Status.
- * 3. Click on Custom Order Status from grid.
+ * 2. Navigate to the Stores > Settings > Order Voucher.
+ * 3. Click on Custom Order Voucher from grid.
  * 4. Fill in all data according to data set.
  * 5. Save order status.
  * 6. Perform all assertions.
@@ -37,14 +37,14 @@ class UpdateCustomOrderStatusTest extends Injectable
     /* end tags */
 
     /**
-     * Order Status Index page.
+     * Order Voucher Index page.
      *
      * @var OrderStatusIndex
      */
     protected $orderStatusIndex;
 
     /**
-     * Order Status Edit page.
+     * Order Voucher Edit page.
      *
      * @var OrderStatusEdit
      */

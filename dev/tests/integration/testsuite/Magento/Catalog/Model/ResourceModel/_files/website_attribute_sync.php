@@ -19,7 +19,7 @@ use \Magento\TestFramework\Helper\Bootstrap;
 
 /**
  * create whole website->storeGroup->[store1,store2] structure and add product to it with
- * "Status" website attribute values that have different values in the same website (which is wrong behavior)
+ * "Voucher" website attribute values that have different values in the same website (which is wrong behavior)
  * also turns on "Require sync" flag
  */
 

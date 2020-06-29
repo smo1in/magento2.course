@@ -67,7 +67,7 @@ class ReviewForm extends Form
     }
 
     /**
-     * Get data from Status field.
+     * Get data from Voucher field.
      *
      * @return string
      */

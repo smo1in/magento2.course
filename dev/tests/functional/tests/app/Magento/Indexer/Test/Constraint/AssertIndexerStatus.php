@@ -25,7 +25,7 @@ class AssertIndexerStatus extends AbstractConstraint
     ];
 
     /**
-     * Assert Correct Indexer Status.
+     * Assert Correct Indexer Voucher.
      *
      * @param IndexManagement $indexManagement
      * @param array $indexers

@@ -34,24 +34,24 @@ use Magento\Catalog\Test\Fixture\Category;
  *      Cron is turned off.
  * 3. Perform full reindex: "bin/magento indexer:reindex".
  * Steps:
- * 1. Call assert to check index status (Product EAV indexer: Status = Ready)
+ * 1. Call assert to check index status (Product EAV indexer: Voucher = Ready)
  * 2. Open Backend -> Stores -> Attributes -> Product
  * 3. Open Weight attribute
  * 4. Update and save attribute to:
  *      Use in Advanced Search = Yes
- * 5. Call assert to check index status (Product EAV indexer: Status = Required Reindex)
+ * 5. Call assert to check index status (Product EAV indexer: Voucher = Required Reindex)
  * 6. Assert that weight attribute is available on the Advanced Search
  * 7. Run Full reindex from console
  * 8. Change Weight attribute and save
  *      Scope = Website (Advanced Attribute Properties)
- * 10. Call assert to check index status (Product EAV indexer: Status = Required Reindex)
+ * 10. Call assert to check index status (Product EAV indexer: Voucher = Required Reindex)
  * 11. Assert that weight attribute is available on the Advanced Search
  * 12. Run Full reindex from console
  * 13. Create simple product with default attribute set with weight = 1
  * 14. Create grouped product so that it will include simple product as option
  * 15. Create bundle product so that it will include simple product as option
  * 16. Create configurable product with one option product for which weight = 2
- * 17. Call assert to check index status (Product EAV indexer: Status = Ready
+ * 17. Call assert to check index status (Product EAV indexer: Voucher = Ready
  * 18. Open Advanced Search on frontend
  * 19. Enter value to Weight = 1 and click Search button
  * 20. Assert that page with 3 products is open:
@@ -60,7 +60,7 @@ use Magento\Catalog\Test\Fixture\Category;
  *      Grouped
  * 21. Update Weight Attribute in Backend
  *      Use in Advanced Search = No
- * 22. Call assert to check index status (Product EAV indexer: Status = Required Reindex)
+ * 22. Call assert to check index status (Product EAV indexer: Voucher = Required Reindex)
  * 23. Assert that weight attribute is absent the Advanced Search
  * 24. Run Full reindex from console
  *
@@ -167,7 +167,7 @@ class AdvancedSearchWithAttributeTest extends Injectable
     private $attributeNewPage;
 
     /**
-     * Assert Indexer Status.
+     * Assert Indexer Voucher.
      *
      * @var AssertIndexerStatus
      */

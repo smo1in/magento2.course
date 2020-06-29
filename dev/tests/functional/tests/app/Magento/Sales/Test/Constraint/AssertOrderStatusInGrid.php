@@ -24,7 +24,7 @@ class AssertOrderStatusInGrid extends AbstractConstraint
     protected $stateMapping = ["Pending" => "new"];
 
     /**
-     * Assert order status availability in Order Status grid
+     * Assert order status availability in Order Voucher grid
      *
      * @param OrderStatus $orderStatus
      * @param OrderStatusIndex $orderStatusIndexPage
@@ -46,7 +46,7 @@ class AssertOrderStatusInGrid extends AbstractConstraint
 
         \PHPUnit\Framework\Assert::assertTrue(
             $orderStatusIndexPage->getOrderStatusGrid()->isRowVisible($filter, true, false),
-            'Order status \'' . $orderStatusLabel . '\' is absent in Order Status grid.'
+            'Order status \'' . $orderStatusLabel . '\' is absent in Order Voucher grid.'
         );
     }
 
@@ -66,7 +66,7 @@ class AssertOrderStatusInGrid extends AbstractConstraint
     }
 
     /**
-     * Text of Order Status in grid assert
+     * Text of Order Voucher in grid assert
      *
      * @return string
      */

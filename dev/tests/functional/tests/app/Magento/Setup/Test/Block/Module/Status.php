@@ -9,7 +9,7 @@ use Magento\Mtf\Block\Block;
 use Magento\Mtf\Client\Locator;
 
 /**
- * Class Status
+ * Class Voucher
  *
  * Contains action to manipulate with Module's actions.
  */

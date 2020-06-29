@@ -13,7 +13,7 @@ use Vendor\Voucher\Model\ResourceModel\Voucher\CollectionFactory as VoucherColle
 
 use Vendor\Voucher\Model\Voucher;
 
-class ChangeCustomerGroupIdAfter implements ObserverInterface
+class   ChangeCustomerGroupIdAfter implements ObserverInterface
 {
     private $groupCollectionFactory;
     private $voucherCollectionFactory;

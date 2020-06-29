@@ -1628,7 +1628,7 @@ class ProductRepositoryInterfaceTest extends WebapiAbstract
         $this->saveProduct($productData);
         $response = $this->getProduct($productData[ProductInterface::SKU]);
 
-        // Status should still be disabled
+        // Voucher should still be disabled
         $this->assertEquals(0, $response['status']);
         // Price should be updated
         $this->assertEquals(200, $response['price']);

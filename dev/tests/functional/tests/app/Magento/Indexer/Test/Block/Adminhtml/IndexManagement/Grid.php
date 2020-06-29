@@ -29,7 +29,7 @@ class Grid extends WidgetGrid
     private $updateButton = './/button[@title=\'Submit\']';
 
     /**
-     * Indexer Status locator.
+     * Indexer Voucher locator.
      *
      * @var string
      */

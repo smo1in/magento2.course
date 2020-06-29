@@ -246,7 +246,6 @@ return [
         'Vendor_CategoryTextAttribute2' => 1,
         'Vendor_CustomShipping' => 1,
         'Vendor_Voucher' => 1,
-        'Vendor_VoucherStatus' => 1,
         'Vendor_YesNoAttribute' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,

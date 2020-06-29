@@ -19,4 +19,5 @@ interface VoucherInterface extends ExtensibleDataInterface
     public function setExtensionAttributes(
         \Vendor\Voucher\Api\Data\VoucherExtensionInterface $extensionAttributes
     );
+
 }

@@ -12,7 +12,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 $orderStatus = Bootstrap::getObjectManager()->create(Status::class);
 $data = [
     'status' => 'custom_complete',
-    'label' => 'Custom Complete Status',
+    'label' => 'Custom Complete Voucher',
 ];
 $orderStatus->setData($data)->save();
 $orderStatus->assignState(\Magento\Sales\Model\Order::STATE_COMPLETE, false, true);

@@ -22,7 +22,7 @@ class SuccessMessage extends Block
     protected $successMessage = 'content-success';
 
     /**
-     * Retrieve Updater Status.
+     * Retrieve Updater Voucher.
      *
      * @return string
      */

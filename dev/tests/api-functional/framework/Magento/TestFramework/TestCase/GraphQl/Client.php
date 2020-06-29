@@ -217,7 +217,7 @@ class Client
             if (count($headerParts) == 2) {
                 $headersArray[trim($headerParts[0])] = trim($headerParts[1]);
             } elseif (preg_match('/HTTP\/[\.0-9]+/', $headerLine)) {
-                $headersArray[trim('Status-Line')] = trim($headerLine);
+                $headersArray[trim('Voucher-Line')] = trim($headerLine);
             }
         }
 

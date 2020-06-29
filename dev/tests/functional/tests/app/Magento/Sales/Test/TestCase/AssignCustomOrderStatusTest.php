@@ -17,14 +17,14 @@ use Magento\Mtf\TestCase\Injectable;
 
 /**
  * Preconditions:
- * 1. Custom Order Status is created.
+ * 1. Custom Order Voucher is created.
  *
  * Steps:
  * 1. Log in as admin.
- * 2. Navigate to the Stores > Settings > Order Status.
- * 3. Click on "Assign Status to State.
+ * 2. Navigate to the Stores > Settings > Order Voucher.
+ * 3. Click on "Assign Voucher to State.
  * 4. Fill in all data according to data set.
- * 5. Save Status Assignment.
+ * 5. Save Voucher Assignment.
  * 6. Call assert assertOrderStatusSuccessAssignMessage.
  * 7. Create Order.
  * 8. Perform all assertions from dataset.
@@ -40,14 +40,14 @@ class AssignCustomOrderStatusTest extends Injectable
     /* end tags */
 
     /**
-     * Order Status Index page.
+     * Order Voucher Index page.
      *
      * @var OrderStatusIndex
      */
     protected $orderStatusIndex;
 
     /**
-     * Order Status Assign page.
+     * Order Voucher Assign page.
      *
      * @var OrderStatusAssign
      */
